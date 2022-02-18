@@ -28,9 +28,9 @@ namespace mySqltestor1.Controllers
         }
 
          [HttpGet("GetAccountNumber")]
-        public admin_login GetAccountNumber(long AccountNumber)
+        public admin_login GetAccountNumber(int ID)
         {
-            return _context.Admin_login.Find(AccountNumber);
+            return _context.Admin_login.Find(ID);
         }
         [HttpPost("InsertCustomer")]
         public IActionResult InsertCustomer([FromBody] admin_login context)
